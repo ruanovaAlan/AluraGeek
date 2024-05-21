@@ -6,14 +6,14 @@ export default function productCard(nombre, precio, imagen, id) {
   card.className = "product-card";
 
   card.innerHTML = `
-    <div class="mx-auto w-[100%] h=[15rem] md:h-[14rem] p-3 bg-[#2E86AB] bg-opacity-85 border-2 border-black rounded-md shadow-lg">
-      <img src="${imagen}" class="mx-auto w-[15rem] md:w-[11rem] bg-[#F0EDEE] border-2 border-black rounded-sm shadow-lg" />
-      <div class="w-[100%] px-2 mt-6 font-body font-bold text-xl">
-        <p class="text-white opacity-80">${nombre}</p>
+    <div class="mx-auto w-[100%] h=[15rem] md:h-[15rem] pb-4 md:pb-0 bg-[#2E86AB] bg-opacity-85 border-2 border-black rounded-t-lg rounded-md shadow-lg">
+      <img src="${imagen}" class="mx-auto w-[100%] md:w-[12.5rem] bg-[#F0EDEE] border-2 border-black rounded-t-lg " />
+      <div class="w-[100%] px-3 mt-6 font-body font-bold text-2xl">
+        <p class="text-2xl text-[#F0EDEE] ">${nombre}</p>
         <div class="flex items-center justify-between mt-3">
-          <p class="text-white ">$ ${precio}</p>
+          <p class="text-black ">$ ${precio}</p>
           <button>
-            <span class="delete-product material-symbols-outlined">
+            <span class="delete-product material-symbols-outlined hover:text-red-600 ease-in-out duration-300">
               delete
             </span>
           </button>
