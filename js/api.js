@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 async function listaProductos() {
   const conexion = await fetch("http://localhost:3000/productos", {
     method: "GET",
@@ -10,34 +12,41 @@ async function listaProductos() {
   return conexionConvertida;
 }
 
-async function crearVideo(titulo, descripcion, url, imagen) {
-  const conexion = await fetch("http://localhost:3001/videos", {
+async function agregarProducto(nombre, precio, imagen) {
+  const conexion = await fetch("http://localhost:3000/productos", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
     },
     body: JSON.stringify({
-      titulo: titulo,
-      descripcion: `${descripcion} mil visualizaciones`,
-      url: url,
-      imagen: imagen
+      nombre: nombre,
+      precio: precio,
+      imagen: imagen,
+      id: uuidv4()
     })
   })
   if (!conexion.ok) {
-    throw new Error("No fue posible enviar el video");
+    throw new Error("No fue posible agregar el producto");
   }
   const conexionConvertida = await conexion.json();
 
   return conexionConvertida;
 }
 
-async function buscarVideo(referencia) {
-  const conexion = await fetch(`http://localhost:3001/videos?q=${referencia}`)
-  const conexionConvertida = conexion.json();
+async function borrarProducto(id) {
+  const conexion = await fetch(`http://localhost:3000/productos/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json"
+    }
+  });
 
-  return conexionConvertida;
+  if (!conexion.ok) {
+    throw new Error("No fue posible borrar el producto");
+  }
 }
 
+
 export const api = {
-  listaProductos, crearVideo, buscarVideo
+  listaProductos, agregarProducto, borrarProducto
 }
