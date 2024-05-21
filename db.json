@@ -1,0 +1,40 @@
+{
+  "productos": [
+    {
+      "nombre": "Ako 3068",
+      "precio": 100,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/v1716246948/aluraGeek/ako-3068_yq6kbm.png",
+      "id": 1
+    },
+    {
+      "nombre": "GK-Thunder",
+      "precio": 500,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/v1716246948/aluraGeek/gk-thunder_hg7gc7.png",
+      "id": 2
+    },
+    {
+      "nombre": "BK-RWB",
+      "precio": 200,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1716243823/aluraGeek/bk-rwb_jytz2k.png",
+      "id": 3
+    },
+    {
+      "nombre": "Ocelot",
+      "precio": 150,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/v1716246947/aluraGeek/ocelot_r5hbk8.png",
+      "id": 4
+    },
+    {
+      "nombre": "ThermalTake",
+      "precio": 450,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/v1716246948/aluraGeek/thermaltake_mnnbds.png",
+      "id": 5
+    },
+    {
+      "nombre": "Logitech G413",
+      "precio": 1000,
+      "imagen": "https://res.cloudinary.com/dmt9srumx/image/upload/v1716246948/aluraGeek/logi-g413_ht3exk.png",
+      "id": 6
+    }
+  ]
+}

@@ -9,3 +9,8 @@
 .robot-h1 {
   font-size: 40px !important;
 }
+
+.delete-product {
+  font-size: 28px !important;
+  font-weight: 600 !important;
+}
