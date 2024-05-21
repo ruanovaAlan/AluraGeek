@@ -2,6 +2,7 @@
   "name": "alura-geek",
   "private": true,
   "version": "0.0.0",
+  "proxy": "https://alura-geek-api-iota.vercel.app/productos",
   "type": "module",
   "scripts": {
     "dev": "vite",

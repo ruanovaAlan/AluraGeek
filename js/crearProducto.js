@@ -12,7 +12,9 @@ async function crearProducto(event) {
     await api.agregarProducto(nombre, precio, imagen);
     window.location.href = "index.html";
   } catch {
-    alert("No fue posible agregar el producto");
+    // alert("No fue posible agregar el producto");
+    window.location.href = "index.html";
+    console.log("No fue posible agregar el producto")
   }
 }
 

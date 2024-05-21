@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 async function listaProductos() {
-  const conexion = await fetch("http://localhost:3000/productos", {
+  const conexion = await fetch("https://alura-geek-api-iota.vercel.app/productos", {
     method: "GET",
     headers: {
       "Content-type": "application/json"
@@ -13,7 +13,7 @@ async function listaProductos() {
 }
 
 async function agregarProducto(nombre, precio, imagen) {
-  const conexion = await fetch("http://localhost:3000/productos", {
+  const conexion = await fetch("https://alura-geek-api-iota.vercel.app/productos", {
     method: "POST",
     headers: {
       "Content-type": "application/json"
@@ -34,7 +34,7 @@ async function agregarProducto(nombre, precio, imagen) {
 }
 
 async function borrarProducto(id) {
-  const conexion = await fetch(`http://localhost:3000/productos/${id}`, {
+  const conexion = await fetch(`https://alura-geek-api-iota.vercel.app/productos/${id}`, {
     method: "DELETE",
     headers: {
       "Content-type": "application/json"
